@@ -92,7 +92,7 @@ module.exports = function (app) {
         if (err || !projectdata) {
           res.json({ error: "could not update", _id: _id });
         } else {
-          const issueData = new projectdata.issues.id(_id);
+          const issueData = projectdata.issues.id(_id);
           if (!issueData) {
             res.json({ error: "could not update", _id: _id });
             return;
